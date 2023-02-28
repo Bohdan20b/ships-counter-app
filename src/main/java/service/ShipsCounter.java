@@ -6,8 +6,8 @@ public class ShipsCounter {
         int shipCount = 0;
         int shipLength = 0;
         for (int[] ints : field) {
-            for (int j = 0; j < ints.length; j++) {
-                switch (ints[j]) {
+            for (int i : ints) {
+                switch (i) {
                     case 1:
                         if (shipLength == 0) {
                             shipCount++;
