@@ -74,7 +74,6 @@ public class ShipsCounterTest {
 
     @Test(expected = RuntimeException.class)
     public void countShips_NotOkInput() {
-        for (Map.Entry<int[][], Integer> entry : data.entrySet()) {
             int[][] input = {
                     {0, 0, 1, 1, 1, 0, 0, 1, 0, 0},
                     {1, 1, 1, 1, 0, 0, 0, 0, 1, 1},
@@ -88,6 +87,5 @@ public class ShipsCounterTest {
                     {0, 0, 0, 0, 0, 0, 0, 0, 1, 1}
             };
             ShipsCounter.countShips(input);
-        }
     }
 }
