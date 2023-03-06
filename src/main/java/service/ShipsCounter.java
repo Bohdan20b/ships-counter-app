@@ -7,15 +7,8 @@ public class ShipsCounter {
         int[][] testField = new int[field.length + 1][field[0].length + 1];
 
         for (int i = 0; i < testField.length - 1; i++) {
-            for (int j = 0; j < testField[0].length - 1; j++) {
-                testField[i][j] = field[i][j];
-            }
-        }
-
-        for (int i = testField.length - 1; i < testField.length; i++) {
-            for (int j = testField[0].length - 1; j < testField.length; j++) {
-                testField[i][j] = 0;
-            }
+            if (testField[0].length - 1 >= 0)
+                System.arraycopy(field[i], 0, testField[i], 0, testField[0].length - 1);
         }
 
         for (int i = 0; i < testField.length; i++) {
